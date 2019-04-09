@@ -12,19 +12,17 @@ class Bear
     @belly.count
   end
 
-  def eat_fish(fish)
-    @belly << fish
+  def eat_fish(river)
+    @belly << river.fishes[0]
   end
 
-  def hunt_from(river, fish_name)
-    for fish in river.fishes()
-      if fish.name == fish_name
-        eat_fish(fish_name)
-      end
-    end
+  def hunt_from(river)
+    eat_fish(river)
+    river.fishes.delete_at(0)
+  end
 
-    river.fish_is_gone(fish_name)
-
+  def roar
+    return "Roar!"
   end
 
 

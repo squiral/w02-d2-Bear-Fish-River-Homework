@@ -1,6 +1,6 @@
 class River
 
-  attr_reader :name, :fishes
+  attr_accessor :name, :fishes
 
   def initialize(name, fish)
     @name = name
@@ -11,8 +11,22 @@ class River
     @fishes.count
   end
 
-  def fish_is_gone(fish)
-    @fishes.delete(fish)
+  def find_fish_by_name(fish_name)
+    for fish in @fishes
+      if fish.name == fish_name
+        return fish.name
+      end
+    end
+
+    return nil
+
   end
+
+  def fish_is_gone(fish)
+    index = @fishes.index(fish)
+    @fishes.slice!(index)
+  end
+
+
 
 end
