@@ -22,10 +22,18 @@ class River
 
   end
 
-  def fish_is_gone(fish)
-    index = @fishes.index(fish)
-    @fishes.slice!(index)
+  def river_empty
+    @fishes.clear
   end
+
+  def spawn
+    @fishes += ["Calumn", "Catherine", "Mindy"]
+  end
+
+  # def fish_is_gone(fish)
+  #   index = @fishes.index(fish)
+  #   @fishes.slice!(index)
+  # end
 
 
 

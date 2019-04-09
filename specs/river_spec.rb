@@ -28,10 +28,21 @@ class RiverTest < MiniTest::Test
     assert_equal(nil, nil_result)
   end
 
-  def test_fish_gone
-    result = @river.fish_is_gone("Clive")
-    assert_equal(nil, result)
+  def test_river_empty
+    @river.river_empty
+    assert_equal(0, @river.count_fish)
   end
+
+  def test_river_spawn
+    @river.river_empty
+    @river.spawn
+    assert_equal(3, @river.count_fish)
+  end
+
+  # def test_fish_gone
+  #   result = @river.fish_is_gone("Clive")
+  #   assert_equal(nil, result)
+  # end
 
 
 end
