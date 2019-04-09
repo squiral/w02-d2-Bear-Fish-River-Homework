@@ -25,6 +25,10 @@ class Bear
     return "Roar!"
   end
 
+  def report_fish_in_belly
+    return "I have #{belly_count} fish in my belly!"
+  end
+
 
 
 end

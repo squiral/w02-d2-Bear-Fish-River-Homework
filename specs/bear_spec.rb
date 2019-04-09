@@ -33,6 +33,12 @@ class BearTest < MiniTest::Test
     assert_equal("Roar!", @bear.roar)
   end
 
+  def test_report_fish_in_belly
+    @bear.hunt_from(@river)
+    result = @bear.report_fish_in_belly
+    assert_equal("I have 1 fish in my belly!", result)
+  end
+
 
 
 end
