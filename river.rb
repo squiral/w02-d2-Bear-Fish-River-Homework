@@ -27,7 +27,9 @@ class River
   end
 
   def spawn
-    @fishes += ["Calumn", "Catherine", "Mindy"]
+    if @fishes.count == 0
+      @fishes += ["Calumn", "Catherine", "Mindy"]
+    end
   end
 
   # def fish_is_gone(fish)
